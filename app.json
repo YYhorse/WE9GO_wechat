@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#47B118",
+    "navigationBarTitleText": "WE9GO",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#47b118",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/door_on.png",
+        "iconPath": "images/door_off.png",
+        "pagePath": "pages/index/index",
+        "text": "开门"
+      },
+      {
+        "selectedIconPath": "images/my_on.png",
+        "iconPath": "images/my_off.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

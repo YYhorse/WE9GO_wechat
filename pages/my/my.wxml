@@ -1,0 +1,16 @@
+<!--顶部个人信息展示-->
+<view class='UserInfoLayout'>
+  <image class='AvatarImage' src="{{AvatarUrl}}" background-size="cover" mode="aspectFill"></image>
+  <text class='NiceNameText'>{{NiceName}}</text>
+  <text class='PointText'>{{Point}}</text>
+</view>
+<view class='LineLayout'></view>
+
+<!--中间区域-->
+<view class='SingerLayout' bindtap='点击我的订单'>
+   <image class='SingerImage' src='/images/order.png'></image>
+   <text class='SingerText'>My order</text>
+    <view class='SingerEndLayout'>
+      <image class='SingerRightImage' src='/images/right.png'></image>
+    </view>
+</view>

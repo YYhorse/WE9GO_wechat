@@ -1,0 +1,36 @@
+/**index.wxss**/
+page{
+  background-color: #F3F5F7;
+  height: 100%;
+  width: 100%;
+}
+.Layout{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.userinfo {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  flex-direction: column;
+  top: 50px;
+  align-items: center;
+  justify-content:center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+.btnImage{
+  display: flex;
+}
