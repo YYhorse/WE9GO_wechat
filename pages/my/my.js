@@ -11,7 +11,10 @@ Page({
       NiceName: app.globalData.userInfo.nickName
     })
   },
-  onShow: function () {
-    
+  点击联系客服:function(e){
+    wx.makePhoneCall({ phoneNumber: '98674625' })
+  },
+  点击意见反馈:function(e){
+    wx.navigateTo({ url: '/pages/feedback/feedback' });
   }
 })

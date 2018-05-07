@@ -1,9 +1,8 @@
 //app.js
 App({
-  onLaunch: function () {
-  
-  },
   globalData: {
+    code: null,
+    user_id: null,
     userInfo: null
-  }
+  },
 })

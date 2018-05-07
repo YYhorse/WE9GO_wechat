@@ -3,7 +3,7 @@
   <image class='btnImage' src='/images/btnbackground.png' bindtap='点击开门'></image>
 </view>
 <view class="userinfo">
-  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <image bindtap="bindViewTap" class="userinfo-avatar"  src="{{AvatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{NiceName}}</text>
 </view> 
    

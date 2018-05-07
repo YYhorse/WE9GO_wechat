@@ -3,27 +3,37 @@
 const app = getApp()
 Page({
   data: {
-  
+    AvatarUrl: "",
+    NiceName: "Login...",
   },
   onLoad: function () {
     this.获取用户信息();
   },
-  获取用户信息:function(){
-    if (app.globalData.userInfo) {
-      this.setData({  userInfo: app.globalData.userInfo })
-    } else if (this.data.canIUse) {
-      app.userInfoReadyCallback = res => {
-        this.setData({  userInfo: res.userInfo  })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({  userInfo: res.userInfo  })
+  获取用户信息: function () {
+    var that = this;
+    wx.showLoading({ title: '正在登录中' })
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          getApp().globalData.code = res.code;
+          console.log('Code=' + res.code);
+          wx.getUserInfo({
+            success: function (res) {
+              getApp().globalData.userInfo = res.userInfo
+              if(that.userInfoReadyCallback)  that.userInfoReadyCallback(res)
+              console.log(res.userInfo);
+              that.setData({
+                AvatarUrl: app.globalData.userInfo.avatarUrl,
+                NiceName: app.globalData.userInfo.nickName
+              })
+              wx.hideLoading();
+              //that.AutoLogin(res);      //自动登陆
+            },
+            fail: function () { wx.showToast({ title: "获取信息失败!", }) }
+          })
         }
-      })
-    }
+      }
+    })
   },
   点击开门:function(e){
     wx.showModal({

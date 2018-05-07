@@ -5,11 +5,32 @@
   <text class='PointText'>{{Point}}</text>
 </view>
 <view class='LineLayout'></view>
-
 <!--中间区域-->
 <view class='SingerLayout' bindtap='点击我的订单'>
    <image class='SingerImage' src='/images/order.png'></image>
    <text class='SingerText'>My order</text>
+    <view class='SingerEndLayout'>
+      <image class='SingerRightImage' src='/images/right.png'></image>
+    </view>
+</view>
+<view class='SingerLayout' bindtap='点击我的面部'>
+   <image class='SingerImage' src='/images/face.png'></image>
+   <text class='SingerText'>My face</text>
+    <view class='SingerEndLayout'>
+      <image class='SingerRightImage' src='/images/right.png'></image>
+    </view>
+</view>
+<view class='LineLayout2'></view>
+<view class='SingerLayout' bindtap='点击意见反馈'>
+   <image class='SingerImage' src='/images/feedback.png'></image>
+   <text class='SingerText'>Feedback</text>
+    <view class='SingerEndLayout'>
+      <image class='SingerRightImage' src='/images/right.png'></image>
+    </view>
+</view>
+<view class='SingerLayout' bindtap='点击联系客服'>
+   <image class='SingerImage' src='/images/contect.png'></image>
+   <text class='SingerText'>Contact us</text>
     <view class='SingerEndLayout'>
       <image class='SingerRightImage' src='/images/right.png'></image>
     </view>

@@ -1,7 +1,9 @@
 {
   "pages":[
+    "pages/order/order",
     "pages/index/index",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/feedback/feedback"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -18,13 +20,13 @@
         "selectedIconPath": "images/door_on.png",
         "iconPath": "images/door_off.png",
         "pagePath": "pages/index/index",
-        "text": "开门"
+        "text": "Open door"
       },
       {
         "selectedIconPath": "images/my_on.png",
         "iconPath": "images/my_off.png",
         "pagePath": "pages/my/my",
-        "text": "我的"
+        "text": "My info"
       }
     ]
   }
