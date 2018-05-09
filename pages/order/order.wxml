@@ -1,0 +1,17 @@
+<view class='linecolumngray'></view>
+<scroll-view class="OrderLayout" scroll-y="true" scroll-top="0">
+  <view wx:for="{{Order}}" wx:key="code">
+    <view class="OrderItemLayout" data-numid="{{index}}" bindtap="ClickOrderMethod">
+      <text class="OrderTime">{{item.created_at}}</text>
+      <view class='MenuInfoLayout'>
+        <block wx:for="{{item.menu_info}}" wx:for-item="menuinfo" wx:key="id">
+            <text class='MenuInfo'>{{menuinfo.goods_name}}</text>
+        </block>
+      </view>
+      <view class='SingerEndLayout'>
+        <text class="MenuItemPrice">＄{{item.order_total}}</text>  
+        <image class='SingerRightImage' src='/images/right.png'></image>
+      </view>
+    </view>
+  </view> 
+</scroll-view> 
