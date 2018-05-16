@@ -82,7 +82,7 @@ Page({
         if (Ares.statusCode == 200) {
           //---登陆成功----//
           getApp().globalData.user_id = Ares.data.user.userId;
-          console.log("UserId=" + getApp().globalData.user_id);
+          getApp().globalData.integration = Ares.data.user.integration;
         }
         else {
           wx.showModal({
@@ -125,7 +125,7 @@ Page({
         }
         else {
           wx.showModal({
-            title: 'Open failure',
+            title: 'Open door failure',
             content: 'Interface return：' + Ares.data,
           })
         }
