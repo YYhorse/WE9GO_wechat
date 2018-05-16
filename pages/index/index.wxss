@@ -4,12 +4,39 @@ page{
   height: 100%;
   width: 100%;
 }
-.Layout{
+.HideShowLayout{
+  display: none
+}
+.TipAllowUserPermission{
   display: flex;
   height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.MainLayout{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.AllowPermissionButoon{
+  display:flex;
+  width: 300px;
+  margin-top: 100rpx;
+  flex-direction:row;
+  align-items: center;
+  justify-content:center;
+  background: #47B118;
+  color: white;
+  border-radius: 8px;
+}
+.AllowPermissionText{
+  display: flex;
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 30rpx;
 }
 .userinfo {
   display: flex;
@@ -33,4 +60,9 @@ page{
 }
 .btnImage{
   display: flex;
+}
+.tipImage{
+  display: flex;
+  width: 128px;
+  height: 128px;
 }
