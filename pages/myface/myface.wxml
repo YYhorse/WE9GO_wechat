@@ -1,0 +1,4 @@
+<view class="MainLayout">
+  <image class='FaceImage' src="{{faceUrl==null?'/images/face.png':faceUrl}}"></image>
+  <button class="UpdataButtion" bindtap='点击更换头像'>{{buttonInfo}}</button>
+</view>

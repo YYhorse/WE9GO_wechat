@@ -102,10 +102,7 @@ Page({
       confirmText:'Ok',
       cancelText:'Cancel',
       success:function(res){
-        if(res.confirm){
-          //用户点击确认
-          that.开门请求();
-        }
+        if(res.confirm){  that.开门请求();  }
       }
     })
   },

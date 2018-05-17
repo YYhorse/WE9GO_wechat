@@ -21,6 +21,14 @@
     </view>
 </view>
 <view class='LineLayout2'></view>
+<view class='SingerLayout' bindtap='点击积分商城'>
+   <image class='SingerImage' src='/images/shop.png'></image>
+   <text class='SingerText'>Shopping mall</text>
+    <view class='SingerEndLayout'>
+      <image class='SingerRightImage' src='/images/right.png'></image>
+    </view>
+</view>
+<view class='LineLayout2'></view>
 <view class='SingerLayout' bindtap='点击意见反馈'>
    <image class='SingerImage' src='/images/feedback.png'></image>
    <text class='SingerText'>Feedback</text>
@@ -29,9 +37,10 @@
     </view>
 </view>
 <view class='SingerLayout' bindtap='点击联系客服'>
-   <image class='SingerImage' src='/images/contect.png'></image>
+   <image class='SingerImage' src='/images/contect.png'></image> 
    <text class='SingerText'>Contact us</text>
     <view class='SingerEndLayout'>
       <image class='SingerRightImage' src='/images/right.png'></image>
     </view>
 </view>
+

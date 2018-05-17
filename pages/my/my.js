@@ -17,5 +17,11 @@ Page({
   },
   点击意见反馈:function(e){
     wx.navigateTo({ url: '/pages/feedback/feedback' });
+  },
+  点击我的订单:function(e){
+    wx.navigateTo({ url: '/pages/order/order'});
+  },
+  点击我的面部:function(e){
+    wx.navigateTo({ url: '/pages/myface/myface' });
   }
 })

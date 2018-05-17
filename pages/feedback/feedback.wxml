@@ -3,5 +3,13 @@
   <text class='InputTitleText'>Problems and opinions</text>
   <textarea class='InputContextText' bindblur="bindTextAreaBlur" auto-height placeholder="Please enter the content" placeholder-style="color:#DADADA" bindinput="输入内容" />
 </view>
+
+<view class='Customerservice'>
+  <contact-button class="button-image" size='1000'/>
+  <text class='CustomerText'>Online Service</text>
+</view>
+
 <!--底部发布-->
-<view class='BottomNewServiceLayout' bindtap='点击提交'><text class='NewServiceText'>submit</text></view>
+<view class='BottomNewServiceLayout' bindtap='点击提交'>
+  <text class='NewServiceText'>submit</text>
+</view>

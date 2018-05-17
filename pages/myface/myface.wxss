@@ -1,0 +1,28 @@
+page{
+  background-color: #F3F5F7;
+  height: 100%;
+  width: 100%;
+}
+.MainLayout{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;   
+}
+.FaceImage{
+  height: 120px;
+  width: 120px;
+  display: flex;
+  margin-top: 200rpx;
+}
+.UpdataButtion{
+ display:flex;
+  width: 300px;
+  margin-top: 100rpx;
+  flex-direction:row;
+  align-items: center;
+  justify-content:center;
+  background: #47B118;
+  color: white;
+  border-radius: 8px;
+}

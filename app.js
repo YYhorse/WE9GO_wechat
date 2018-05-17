@@ -8,6 +8,8 @@ App({
     HomeUrl: 'https://www.matrixsci.cn/supermarket',
     LoginUrl:'/user/login?',
     OpenDoorUrl:'/store/open?',
-    FeedbackUrl:'/feedback/add?'
+    FeedbackUrl:'/feedback/add?',
+    GetFaceInfoUrl:'/user/image?',
+    UpdataFaceUrl:'/user/upload?'
   },
 })
