@@ -53,7 +53,7 @@ page{
 }
 .SingerImage{
   display: flex;
-  width: 70rpx;
+  width: 80rpx;
   height: 60rpx;
   margin-left: 20rpx;
 }

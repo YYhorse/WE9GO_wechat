@@ -23,5 +23,11 @@ Page({
   },
   点击我的面部:function(e){
     wx.navigateTo({ url: '/pages/myface/myface' });
+  },
+  点击积分商城:function(e){
+    wx.showModal({
+      title: 'Development',
+      content: 'The function will be open immediately',
+    })
   }
 })

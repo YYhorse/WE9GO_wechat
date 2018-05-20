@@ -89,5 +89,11 @@ Page({
         wx.showToast({ title: 'Error,the Service is error!', })
       }
     })
+  },
+  显示ID:function(e){
+    wx.showModal({
+      title: 'UserId',
+      content: getApp().globalData.user_id
+    })
   }
 })

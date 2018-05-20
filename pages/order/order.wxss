@@ -28,40 +28,38 @@ page{
 }
 .OrderTime{
   display: flex;
-  width: 200rpx;
   font-size: 15rpx;
   color:gray;
-}
-.MenuInfoLayout{
-  width: 50%;
-  overflow:hidden;      
-  text-overflow:ellipsis;
-  white-space:nowrap;  
-  display: flex;
-  flex-direction: row;
 }
 .MenuInfo{
   font-size: 30rpx;
   margin-left: 10rpx;
   color: black;
 }
+
+.DoubleBeginLayout{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: flex-start;
+}
 .MenuItemPrice{
   width: 100rpx;
   font-size: 30rpx;
-  margin-left: 20rpx;
   color: red;
+  margin-right: 10rpx;
 }
-
 .SingerEndLayout{
   display: flex;
   width: 20%;
   flex-direction: row;
   justify-content:flex-end;
-  align-items: center;           
+  align-items: center;    
+  margin-right: 30rpx;       
 }
 .SingerRightImage{
   width:  20rpx;
   height: 20rpx;
   margin-top: 10rpx;
-  
 }

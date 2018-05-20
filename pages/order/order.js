@@ -1,5 +1,4 @@
 var app = getApp()      // 获取入口文件app的应用实例
-var tempData = { "status_code": 200, "order_list": [{ "order_id": "20180501001001", "created_at": "2018-05-01 10:00:00", "order_total": "2.6", "order_status": "Finish", "pay_type": "Wechat", "menu_info": [{ "goods_pic": "www.we9pay.com/xx/xx.jpg", "goods_name": "Sprite 250ml", "goods_number": "2", "goods_price": "1.6" }, { "goods_pic": "www.we9pay.com/xx/xx.jpg", "goods_name": "Custard pie", "goods_number": "1", "goods_price": "1.0" }] }, { "order_id": "20180502002002", "created_at": "2018-05-02 10:00:00", "order_total": "2.6", "order_status": "Finish", "pay_type": "Wechat", "menu_info": [{ "goods_pic": "www.we9pay.com/xx/xx.jpg", "goods_name": "Cool 250ml", "goods_number": "2", "goods_price": "1.6" }, { "goods_pic": "www.we9pay.com/xx/xx.jpg", "goods_name": "Custard pie", "goods_number": "1", "goods_price": "1.0" }] }] };
 Page({
   data: {
     Order: "",
@@ -8,8 +7,40 @@ Page({
     var that = this;
     wx.setNavigationBarTitle({ title: 'My Order' }),
     wx.showLoading({ title: 'Order loading', })
-
-    wx.hideLoading();
-    that.setData({ Order: tempData.order_list})
+    this.获取订单列表();
+  },
+  获取订单列表:function(){
+    var that = this;
+    wx.request({
+      url: getApp().globalData.HomeUrl + getApp().globalData.GetOrderListUrl,
+      data: { "userId": getApp().globalData.user_id },
+      method: 'GET',
+      success: function (Ares) {
+        wx.hideLoading();
+        console.log(Ares.data);
+        if (Ares.statusCode == 200) {
+          that.setData({  Order:Ares.data.orders })
+        }
+        else {
+          wx.showModal({
+            title: 'Get order failure',
+            content: 'Interface return：' + Ares.data,
+          })
+        }
+      },
+      fail: function () { 
+        wx.hideLoading(); 
+        wx.showModal({
+          title: 'Get order failure',
+          content: 'Service Failure',
+        }) 
+      }
+    })
+  },
+  ClickOrderMethod:function(e){
+    var that = this;
+    var Index = e.currentTarget.dataset.numid;
+    console.log("订单ID=" + that.data.Order[Index].orderId);
+    wx.navigateTo({ url: '/pages/orderdetail/orderdetail?orderId=' + that.data.Order[Index].orderId})
   }
 })

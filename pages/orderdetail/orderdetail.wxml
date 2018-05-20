@@ -1,0 +1,41 @@
+<view class='OrderCodeTitle'>
+  <image class="BuyCarItemLogo" src="/images/tiao.png"/> 
+  <text class='OrderCodeTxt'>Order number :  {{OrderInfo.orderId}}</text>
+</view>
+<view class='OrderCodeTitle'>
+  <image class="BuyCarItemLogo" src="/images/tiao.png"/> 
+  <text class='OrderCodeTxt'>My shopping list</text>
+</view>
+<block wx:for="{{OrderInfo.items}}" wx:key="code">
+  <view class="MenuItemLayout">
+    <image class="MenuItemPhoto" src="{{item.goods_url}}" mode="aspectFill"/> 
+    <text class="MenuItemName">{{item.goods_name}}</text>
+    <text class="MenuItemNumber">×{{item.goods_number}}</text>
+    <text class="MenuItemPrice">＄{{item.goods_price}}</text>
+  </view>  
+</block>
+<view class='MenuTitle'>
+  <image class="BuyCarItemLogo" src="/images/tiao.png"/> 
+  <text class='OrderCodeTxt'>Details of the bill</text>
+</view>
+<view class='OneRowTwoDataLayout'>
+  <text class='FirstDataTxt'>Create time</text>
+  <view class='SecondDataLayout'>
+    <text class='SecondDataTxt'>{{OrderInfo.ttl}}</text>
+  </view>
+</view>
+<view class='linecolumngray'></view>
+<view class='OneRowTwoDataLayout'>
+  <text class='FirstDataTxt'>Total</text>
+  <view class='SecondDataLayout'>
+    <text class='SecondDataTxt'>＄{{OrderInfo.order_total}}</text>
+  </view>
+</view>
+<view class='linecolumngray'></view>
+<view class='OneRowTwoDataLayout'>
+  <text class='FirstDataTxt'>Payment status</text>
+  <view class='SecondDataLayout'>
+    <text class='SecondDataTxt'>{{OrderInfo.order_status}}</text>
+  </view>
+</view>
+<view class='linecolumngray'></view>

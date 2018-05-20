@@ -10,6 +10,8 @@ App({
     OpenDoorUrl:'/store/open?',
     FeedbackUrl:'/feedback/add?',
     GetFaceInfoUrl:'/user/image?',
-    UpdataFaceUrl:'/user/upload?'
+    UpdataFaceUrl:'/user/upload?',
+    GetOrderListUrl:'/orders/getOrderByUser?',
+    GetOrderDetailUrl:'/orders/getOrderDetail?'
   },
 })

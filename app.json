@@ -1,8 +1,10 @@
 {
   "pages":[
+  
     "pages/index/index",
     "pages/myface/myface",
     "pages/order/order",
+    "pages/orderdetail/orderdetail",
     "pages/my/my",
     "pages/feedback/feedback",
     "pages/shopmall/shopmall"

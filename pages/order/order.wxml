@@ -2,11 +2,9 @@
 <scroll-view class="OrderLayout" scroll-y="true" scroll-top="0">
   <view wx:for="{{Order}}" wx:key="code">
     <view class="OrderItemLayout" data-numid="{{index}}" bindtap="ClickOrderMethod">
-      <text class="OrderTime">{{item.created_at}}</text>
-      <view class='MenuInfoLayout'>
-        <block wx:for="{{item.menu_info}}" wx:for-item="menuinfo" wx:key="id">
-            <text class='MenuInfo'>{{menuinfo.goods_name}}</text>
-        </block>
+      <view class='DoubleBeginLayout'>
+        <text class='MenuInfo'>WE9GO</text>
+        <text class='OrderTime'>2018-05-19 13:58:30</text>
       </view>
       <view class='SingerEndLayout'>
         <text class="MenuItemPrice">＄{{item.order_total}}</text>  
