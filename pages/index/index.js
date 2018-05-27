@@ -5,7 +5,8 @@ Page({
   data: {
     AvatarUrl: "",
     NiceName: "Login...",
-    UsePermission: true
+    UsePermission: true,
+    LoginStatus:false
   },
   onLoad: function () {
     // 查看是否授权
@@ -64,6 +65,7 @@ Page({
   },
   //-----自动登陆-----//
   AutoLogin: function (res) {
+    var that = this;
     //----HTTP登陆请求-----//
     wx.request({
       url: getApp().globalData.HomeUrl + getApp().globalData.LoginUrl,
@@ -81,6 +83,7 @@ Page({
         console.log(Ares.data);
         if (Ares.statusCode == 200) {
           //---登陆成功----//
+          that.data.LoginStatus = true;
           getApp().globalData.user_id = Ares.data.user.userId;
           getApp().globalData.integration = Ares.data.user.integration;
         }
@@ -96,15 +99,17 @@ Page({
   },
   点击开门:function(e){
     var that = this;
-    wx.showModal({
-      title: 'Open the door?',
-      content: 'Please confirm whether to open the door and settle',
-      confirmText:'Ok',
-      cancelText:'Cancel',
-      success:function(res){
-        if(res.confirm){  that.开门请求();  }
-      }
-    })
+    if (that.data.LoginStatus){
+      wx.showModal({
+        title: 'Open the door?',
+        content: 'Please confirm whether to open the door and settle',
+        confirmText:'Ok',
+        cancelText:'Cancel',
+        success:function(res){
+          if(res.confirm){  that.开门请求();  }
+        }
+      })
+    }
   },
   开门请求:function(){
     //----HTTP开门请求-----//

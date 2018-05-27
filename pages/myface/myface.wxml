@@ -2,3 +2,8 @@
   <image class='FaceImage' src="{{faceUrl==null?'/images/face.png':faceUrl}}" bindtap='显示ID'></image>
   <button class="UpdataButtion" bindtap='点击更换头像'>{{buttonInfo}}</button>
 </view>
+
+<view class='Customerservice'>
+  <contact-button class="button-image" size='1000'/>
+  <text class='CustomerText'>Online Service</text>
+</view>

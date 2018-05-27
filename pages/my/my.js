@@ -5,12 +5,17 @@ Page({
     NiceName: "无",
     Point:"(0 points)"
   },
-  onLoad: function (options) {
-    this.setData({
-      AvatarUrl: app.globalData.userInfo.avatarUrl,
-      NiceName: app.globalData.userInfo.nickName,
-      Point: "(" + app.globalData.integration +" points)"
-    })
+  onShow:function(){
+    if (app.globalData.userInfo == null) {
+      wx.switchTab({ url: '/pages/index/index' })
+    }
+    else {
+      this.setData({
+        AvatarUrl: app.globalData.userInfo.avatarUrl,
+        NiceName: app.globalData.userInfo.nickName,
+        Point: "(" + app.globalData.integration + " points)"
+      })
+    }
   },
   点击联系客服:function(e){
     wx.makePhoneCall({ phoneNumber: '98674625' })

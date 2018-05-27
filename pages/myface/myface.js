@@ -95,5 +95,23 @@ Page({
       title: 'UserId',
       content: getApp().globalData.user_id
     })
+
+    var self = this;
+    wx.setClipboardData({
+      data: getApp().globalData.user_id,
+      success: function (res) {
+        wx.showModal({
+          title: '提示',
+          content: '复制成功',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('确定')
+            } else if (res.cancel) {
+              console.log('取消')
+            }
+          }
+        })
+      }
+    });  
   }
 })

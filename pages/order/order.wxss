@@ -36,6 +36,18 @@ page{
   margin-left: 10rpx;
   color: black;
 }
+.UnpaidStatueInfo{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  color: red;
+  font-weight: bold ;
+}
+.FinishStatusInfo{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  color: green;
+  font-weight: bold ;
+}
 
 .DoubleBeginLayout{
   display: flex;
